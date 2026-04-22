@@ -28,8 +28,7 @@ distance[v] = distance[u] + graph[u][v];
 }
 for (int u = 0; u < MAX_VERTICES; u++) {
 for (int v = 0; v < MAX_VERTICES; v++) {
-if (graph[u][v] != 0 && distance[u] != INT_MAX && distance[u] + graph[u][v]
-< distance[v]) {
+if (graph[u][v] != 0 && distance[u] != INT_MAX && distance[u] + graph[u][v] < distance[v]) {
 printf("Graph contains negative weight cycle\n");
 return;
 }
