@@ -3,7 +3,7 @@
 #include<stdbool.h>
 int min_dist(int[], bool[]);
 void greedy_dijsktra(int[][6],int);
-int min_dist(int dist[], bool visited[]){ // finding minimum dist
+int min_dist(int dist[], bool visited[]){ 
 int minimum=INT_MAX,ind;
 for(int k=0; k<6; k++) {
 if(visited[k]==false && dist[k]<=minimum) {
@@ -20,7 +20,7 @@ for(int k = 0; k<6; k++) {
 dist[k] = INT_MAX;
 visited[k] = false;
 }
-dist[src] = 0; // Source vertex dist is set 0
+dist[src] = 0; 
 for(int k = 0; k<6; k++) {
 int m=min_dist(dist,visited);
 visited[m]=true;
