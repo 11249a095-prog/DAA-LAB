@@ -50,8 +50,7 @@ int fordFulkerson(int source, int sink) {
     while (bfs(source, sink)) {
         int increment = O;
         for (u = sink; pred[u] >= 0; u = pred[u]) {
-            increment = min(increment,
-                            capacity[pred[u]][u] - flow[pred[u]][u]);
+            increment = min(increment,capacity[pred[u]][u] - flow[pred[u]][u]);
         }
         for (u = sink; pred[u] >= 0; u = pred[u]) {
             flow[pred[u]][u] += increment;
